@@ -22,7 +22,6 @@ public:
     void set_precio(float);
     void set_stock(int);
     void set_categoria(std::string);
-
 };
 
 Producto::Producto(){
