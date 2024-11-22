@@ -22,8 +22,8 @@ int main(){
     cout << "Disponible en la tienda: " << cepillo1.get_tienda().get_nombre() << endl;
     std::cout<<"\n";
 
-    Tienda tienda1("Patitas Felices", "Avenida de las Flores", "Grande");
-    Cama_perros cama1(tienda1, "Cama Deluxe", 899, 5, "Descanso", "Algodón", "Suave", "Grande");
+    Tienda tienda2("Patitas Felices", "Avenida de las Flores", "Grande");
+    Cama_perros cama1(tienda2, "Cama Deluxe", 899, 5, "Descanso", "Algodón", "Suave", "Grande");
     cout << "Cama para Perros:" << endl;
     cout << "Nombre del producto: " << cama1.get_nombre() << endl;
     cout << "Precio: $" << cama1.get_precio() << endl;
