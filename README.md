@@ -12,5 +12,8 @@ Ver productos con bajo stock para saber qué artículos necesitan reabastecimien
 Registrar mascotas.
 Registrar si las mascotas necesitan distintos tipos de cuidado.
 
+Este programa no sirve para hacer calculos de productos dentro de una veterinaria, como hacer operaciones.
+
+
 Se implementó una libreria llamada limits. Esta libreria se usó para poder validar la entrada de datos.
 https://www.tutorialspoint.com/cpp_standard_library/limits.htm
