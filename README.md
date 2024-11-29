@@ -9,3 +9,6 @@ Acciones del usuario:
 Agregar productos nuevos al inventario.
 Actualizar el stock de productos, por ejemplo, al registrar una venta o al recibir nuevos productos.
 Ver productos con bajo stock para saber qué artículos necesitan reabastecimiento
+
+Se implementó una libreria llamada limits. Esta libreria se usó para poder validar la entrada de datos.
+https://www.tutorialspoint.com/cpp_standard_library/limits.htm
