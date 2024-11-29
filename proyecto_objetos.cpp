@@ -19,7 +19,43 @@
 #include "Tienda.h"
 #include <iostream>
 #include <string>
+#include <limits>
 using namespace std;
+
+// Función para validar entrada numérica (int)
+int validarEntero() {
+    int valor;
+    while (!(cin >> valor)) {
+        cout << "Entrada invalida. Ingrese un numero entero: ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+    return valor;
+}
+
+// Función para validar entrada numérica (float)
+float validarFloat() {
+    float valor;
+    while (!(cin >> valor)) {
+        cout << "Entrada invalida. Ingrese un numero flotante: ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+    return valor;
+}
+
+// Función para validar entrada de texto (string)
+string validarTexto() {
+    string texto;
+    cin >> texto;
+    while (texto.empty()) {
+        cout << "Entrada invalida. Ingrese texto sin espacios: ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin >> texto;
+    }
+    return texto;
+}
 
 // Función que muestra el menú principal al usuario
 void menu() {
@@ -139,7 +175,8 @@ int main(){
     // Ciclo principal del programa
     do{
         menu(); // Mostrar menú
-        cin>> opcion; // Leer opción
+        opcion = validarEntero(); // Leer y validar opción
+
         switch(opcion){
             
             // Código para agregar productos
@@ -151,25 +188,25 @@ int main(){
                 int stock_cepillo, cama_stock;
 
                 cout << "Ingrese el nombre de la tienda: ";
-                cin>> nombre;
+                nombre = validarTexto();
                 cout << "Ingrese la ubicacion de la tienda: ";
-                cin >> ubicacion;
+                ubicacion = validarTexto();
                 cout << "Ingrese el tamano de la tienda: ";
-                cin>> tamano;
+                tamano = validarTexto();
 
                 cout << "\n--- Datos del Cepillo para Perros ---" << endl;
                 cout << "Nombre del cepillo: ";
-                cin>> cepillo_nombre;
+                cepillo_nombre = validarTexto();
                 cout << "Precio del cepillo: ";
-                cin >> precio_cepillo;
+                precio_cepillo = validarFloat();
                 cout << "Stock del cepillo: ";
-                cin >> stock_cepillo;
+                stock_cepillo = validarEntero();
                 cout << "Categoria del cepillo: ";
-                cin>> categoria;
+                categoria = validarTexto();
                 cout << "Material del cepillo: ";
-                cin>> material;
+                material = validarTexto();
                 cout << "Suavidad del cepillo: ";
-                cin>> suavidad;
+                suavidad = validarTexto();
 
                 // Crear el objeto Cepillo_perros
                 Cepillo_perros cepillo(cepillo_nombre, precio_cepillo,
@@ -177,19 +214,19 @@ int main(){
 
                 cout << "\n--- Datos de cama para Perros ---" << endl;
                 cout << "Nombre de la cama: ";
-                cin >> cama_nombre;
+                cama_nombre = validarTexto();
                 cout << "Precio de la cama: ";
-                cin >> cama_precio;
+                cama_precio = validarFloat();
                 cout << "Stock de la cama: ";
-                cin >> cama_stock;
+                cama_stock = validarEntero();
                 cout << "Categoria de la cama: ";
-                cin >> cama_categoria;
+                cama_categoria = validarTexto();
                 cout << "Material de la cama: ";
-                cin >> cama_material;
+                cama_material = validarTexto();
                 cout << "Suavidad de la cama: ";
-                cin >> cama_suavidad;
+                cama_suavidad = validarTexto();
                 cout << "Tamano de la cama: ";
-                cin >> cama_tamano;
+                cama_tamano = validarTexto();
 
                 // Crear el objeto cama_perros
                 Cama_perros cama(cama_nombre, cama_precio, cama_stock, 
@@ -215,29 +252,29 @@ int main(){
 
                 cout << "\n--- Datos alimento humedo ---" << endl;
                 cout << "Tipo de animal: ";
-                cin >> ta_h;
+                ta_h = validarTexto();
                 cout << "Tamanio del paquete: ";
-                cin >> tp_h;
+                tp_h = validarTexto();
                 cout << "Sabor: ";
-                cin >> s_h;
+                s_h = validarTexto();
                 cout << "Marca: ";
-                cin >> m_h;
+                m_h = validarTexto();
                 cout << "Para que edad es: ";
-                cin >> e_h;
+                e_h = validarEntero();
 
                 cout << "\n--- Datos alimento seco ---" << endl;
                 cout << "Tipo de animal: ";
-                cin >> ta_s;
+                ta_s = validarTexto();
                 cout << "Tamanio del paquete: ";
-                cin >> tp_s;
+                tp_s = validarTexto();
                 cout << "Sabor: ";
-                cin >> s_s;
+                s_s = validarTexto();
                 cout << "Marca: ";
-                cin >> m_s;
+                m_s = validarTexto();
                 cout << "Para que edad es: ";
-                cin >> e_s;
+                e_s = validarEntero();
                 cout << "Dureza del alimento: ";
-                cin >> d_s;
+                d_s = validarTexto();
 
                 alimento_humedo.set_tipo_animal(ta_h);
                 alimento_humedo.set_tamano_paquete(tp_h);
@@ -264,22 +301,22 @@ int main(){
 
                 cout << "\n--- Datos de perro ---" << endl;
                 cout << "Nombre de la mascota: " << endl;
-                cin >> nom;
+                nom = validarTexto();
                 cout << "Tipo de mascota: ";
-                cin >> tip;
+                tip = validarTexto();
                 cout << "Raza: ";
-                cin >> raz;
+                raz = validarTexto();
                 cout << "Tamano de mascota: ";
-                cin >> tam;
+                tam = validarTexto();
                 cout << "Edad: ";
-                cin >> ed;
+                ed = validarEntero();
                 cout << "Cuidado de la mascota" << endl;
                 cout <<"Bano: ";
-                cin >> ban;
+                ban = validarTexto();
                 cout << "Desparasitantes: ";
-                cin >> des;
+                des = validarTexto();
                 cout << "Pedicure: ";
-                cin >> ped;
+                ped = validarTexto();
 
                 perro.set_nombre(nom);
                 perro.set_tipo_mascota(tip);
@@ -303,22 +340,22 @@ int main(){
 
                 cout << "\n--- Datos de gato ---" << endl;
                 cout << "Nombre de la mascota: " << endl;
-                cin >> nom;
+                nom = validarTexto();
                 cout << "Tipo de mascota: ";
-                cin >> tip;
+                tip = validarTexto();
                 cout << "Raza: ";
-                cin >> raz;
+                raz = validarTexto();
                 cout << "Tamano de mascota: ";
-                cin >> tam;
+                tam = validarTexto();
                 cout << "Edad: ";
-                cin >> ed;
+                ed = validarEntero();
                 cout << "Cuidado de la mascota" << endl;
                 cout <<"Bano: ";
-                cin >> ban;
+                ban = validarTexto();;
                 cout << "Desparasitantes: ";
-                cin >> des;
+                des = validarTexto();
                 cout << "Pedicure: ";
-                cin >> ped;
+                ped = validarTexto();
 
                 gato.set_nombre(nom);
                 gato.set_tipo_mascota(tip);
@@ -336,7 +373,6 @@ int main(){
 
             // Mostrar productos
             case 5: {
-                // Mostrar datos del producto 'Cepillo para Perros'
                 mostrarProducto_cepillo(tienda);
                 mostrarProducto_cama(tienda);
                 break;
