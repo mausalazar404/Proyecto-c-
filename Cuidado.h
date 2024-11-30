@@ -19,7 +19,7 @@ using namespace std;
 class Cuidado {
 private:
  //Declara las variables de instancia
-    string baño;             
+    string bano;             
     string desparasitantes;  
     string pedicure;    
 public:
@@ -28,33 +28,33 @@ public:
     Cuidado(string b, string d, string p); // Constructor parametrizado
 
     // Métodos getters
-    string get_baño();
+    string get_bano();
     string get_desparasitantes();
     string get_pedicure();
 
     // Métodos setters
-    void set_baño(string b);
+    void set_bano(string b);
     void set_desparasitantes(string d);
     void set_pedicure(string p);
 };
 
 // Implementación del constructor por defecto
 Cuidado::Cuidado() {
-    baño = "";
+    bano = "";
     desparasitantes = "";
     pedicure = "";
 }
 
 // Implementación del constructor parametrizado
 Cuidado::Cuidado(string b, string d, string p) {
-    baño = b;
+    bano = b;
     desparasitantes = d;
     pedicure = p;
 }
 
 // Métodos getters
-string Cuidado::get_baño() {
-    return baño;
+string Cuidado::get_bano() {
+    return bano;
 }
 
 string Cuidado::get_desparasitantes() {
@@ -66,8 +66,8 @@ string Cuidado::get_pedicure() {
 }
 
 // Métodos setters
-void Cuidado::set_baño(string b) {
-    baño = b;
+void Cuidado::set_bano(string b) {
+    bano = b;
 }
 
 void Cuidado::set_desparasitantes(string d) {
