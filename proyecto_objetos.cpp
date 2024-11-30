@@ -140,7 +140,7 @@ void mostrarPerro(Perro perro){
     cout << "Tamano de la mascota: " << perro.get_tamano() << endl;
     cout << "Edad de la mascota: " << perro.get_edad() << endl;
     cout << "Raza: " << perro.get_raza() << endl;    
-    cout << "Bano: " << cuidado.get_baño() << endl;  
+    cout << "Bano: " << cuidado.get_bano() << endl;  
     cout << "Desparasitantes: " << cuidado.get_desparasitantes() << endl;
     cout << "Pedicure: " << cuidado.get_pedicure() << endl;  
 
@@ -156,7 +156,7 @@ void mostrargato(Gato gato){
     cout << "Tamano de la mascota: " << gato.get_tamano() << endl;
     cout << "Edad de la mascota: " << gato.get_edad() << endl;
     cout << "Raza: " << gato.get_raza() << endl;    
-    cout << "Bano: " << cuidado.get_baño() << endl;  
+    cout << "Bano: " << cuidado.get_bano() << endl;  
     cout << "Desparasitantes: " << cuidado.get_desparasitantes() << endl;
     cout << "Pedicure: " << cuidado.get_pedicure() << endl;  
 
